@@ -1,0 +1,24 @@
+{
+  "name": "nexra-ai",
+  "version": "0.1.0",
+  "description": "NEXRA AI - Sala de control de escritorio para asistentes de IA de programación",
+  "main": "desktop/main.js",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"wait-on tcp:5173 && cross-env NEXRA_DEV=1 electron .\"",
+    "build": "vite build",
+    "start": "vite build && electron ."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.0",
+    "vite": "^5.4.11",
+    "wait-on": "^8.0.1"
+  }
+}
