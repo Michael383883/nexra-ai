@@ -1,0 +1,255 @@
+.pe {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    background: var(--dp-panel);
+    color: var(--dp-text);
+    font-size: 13px;
+}
+
+.pe-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 10px 8px;
+    border-bottom: 1px solid var(--dp-border);
+}
+
+.pe-title {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.pe-title strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pe-path {
+    color: var(--dp-muted);
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl;
+    text-align: left;
+}
+
+.pe-actions {
+    display: flex;
+    gap: 2px;
+    flex: none;
+}
+
+.pe-icon-btn {
+    background: none;
+    border: 0;
+    color: var(--dp-muted);
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.pe-icon-btn:hover:not(:disabled) {
+    background: var(--dp-hover);
+    color: var(--dp-text);
+}
+
+.pe-icon-btn:disabled {
+    opacity: .4;
+    cursor: default;
+}
+
+.pe-search {
+    padding: 8px 10px;
+}
+
+.pe-search input {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--dp-bg);
+    color: var(--dp-text);
+    border: 1px solid var(--dp-border);
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 12px;
+}
+
+.pe-search input:focus {
+    outline: 1px solid var(--dp-accent);
+}
+
+.pe-tree {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding-bottom: 8px;
+}
+
+.pe-hint {
+    color: var(--dp-muted);
+    font-size: 11px;
+    padding: 6px 10px;
+}
+
+.pe-notice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+    color: var(--dp-warn);
+    background: rgba(224, 168, 75, .08);
+}
+
+.pe-notice.pe-warn {
+    justify-content: flex-start;
+}
+
+.pe-error {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 12px;
+    color: var(--dp-danger);
+    background: rgba(229, 88, 91, .1);
+}
+
+.pe-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-top: 1px solid var(--dp-border);
+    color: var(--dp-muted);
+    font-size: 12px;
+}
+
+.pe-link {
+    background: none;
+    border: 0;
+    color: var(--dp-accent);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0;
+}
+
+.pe-link:hover {
+    text-decoration: underline;
+}
+
+.pe-btn {
+    border: 1px solid var(--dp-border);
+    background: var(--dp-hover);
+    color: var(--dp-text);
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.pe-btn-primary {
+    background: var(--dp-accent);
+    border-color: var(--dp-accent);
+    color: #fff;
+}
+
+.pe-btn:disabled {
+    opacity: .6;
+    cursor: default;
+}
+
+.pe-empty {
+    padding: 28px 16px;
+    text-align: center;
+    overflow: auto;
+}
+
+.pe-empty-icon {
+    font-size: 34px;
+}
+
+.pe-empty h3 {
+    margin: 8px 0 4px;
+    font-size: 15px;
+}
+
+.pe-empty p {
+    margin: 0 0 14px;
+    color: var(--dp-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.pe-recent {
+    margin-top: 24px;
+    text-align: left;
+}
+
+.pe-recent-head {
+    display: flex;
+    justify-content: space-between;
+    color: var(--dp-muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 6px;
+}
+
+.pe-recent ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pe-recent li {
+    display: flex;
+    align-items: center;
+}
+
+.pe-recent-item {
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 8px;
+    text-align: left;
+    background: none;
+    border: 0;
+    color: var(--dp-text);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.pe-recent-item:hover {
+    background: var(--dp-hover);
+}
+
+.pe-recent-name {
+    font-size: 13px;
+}
+
+.pe-recent-time {
+    grid-row: 1;
+    grid-column: 2;
+    color: var(--dp-muted);
+    font-size: 11px;
+}
+
+.pe-recent-path {
+    grid-column: 1 / -1;
+    color: var(--dp-muted);
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

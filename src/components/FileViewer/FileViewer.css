@@ -1,0 +1,231 @@
+/* Reutiliza la tarjeta de .pi (ProjectInfo) y solo ajusta lo necesario */
+.fv.pi {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* ───────── Cabecera ───────── */
+.fv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px 14px;
+    border-bottom: 1px solid var(--dp-border, #2a2a2e);
+}
+
+.fv-title {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.fv-name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fv-name-row strong {
+    font-size: 15px;
+}
+
+.fv-lang {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, .15);
+    color: var(--dp-accent, #60a5fa);
+    white-space: nowrap;
+}
+
+.fv-path {
+    font-size: 12px;
+    opacity: .6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fv-meta {
+    font-size: 12px;
+    opacity: .5;
+}
+
+.fv-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.fv-btn {
+    border: 1px solid var(--dp-border, #2a2a2e);
+    background: transparent;
+    color: inherit;
+    border-radius: 6px;
+    padding: 5px 11px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.fv-btn:hover {
+    background: var(--dp-hover, #2a2a2e);
+}
+
+.fv-close {
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.fv-close:hover {
+    background: var(--dp-hover, #2a2a2e);
+}
+
+.fv-notice {
+    padding: 8px 20px;
+    font-size: 12px;
+    background: rgba(234, 179, 8, .12);
+    color: #eab308;
+    border-bottom: 1px solid var(--dp-border, #2a2a2e);
+}
+
+/* ───────── Código ───────── */
+.fv-body {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    background: rgba(0, 0, 0, .18);
+}
+
+.fv-msg {
+    margin: 0;
+    padding: 20px;
+    opacity: .7;
+}
+
+.fv-code {
+    margin: 0;
+    padding: 14px 0;
+    min-width: max-content;
+    font-family: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.65;
+    tab-size: 2;
+}
+
+.fv-line {
+    display: flex;
+}
+
+.fv-line:hover {
+    background: rgba(255, 255, 255, .045);
+}
+
+.fv-num {
+    flex: 0 0 56px;
+    text-align: right;
+    padding-right: 16px;
+    margin-right: 4px;
+    opacity: .3;
+    user-select: none;
+    border-right: 1px solid rgba(255, 255, 255, .06);
+}
+
+.fv-line:hover .fv-num {
+    opacity: .6;
+}
+
+.fv-text {
+    white-space: pre;
+    padding: 0 24px 0 14px;
+    color: #d4d4d4;
+}
+
+/* ───────── Colores de sintaxis ───────── */
+.fv-text .hljs-comment,
+.fv-text .hljs-quote {
+    color: #6a9955;
+    font-style: italic;
+}
+
+.fv-text .hljs-keyword,
+.fv-text .hljs-selector-tag,
+.fv-text .hljs-doctag {
+    color: #c586c0;
+}
+
+.fv-text .hljs-string,
+.fv-text .hljs-regexp,
+.fv-text .hljs-template-variable {
+    color: #ce9178;
+}
+
+.fv-text .hljs-number {
+    color: #b5cea8;
+}
+
+.fv-text .hljs-literal,
+.fv-text .hljs-name,
+.fv-text .hljs-tag {
+    color: #569cd6;
+}
+
+.fv-text .hljs-title,
+.fv-text .hljs-title.function_ {
+    color: #dcdcaa;
+}
+
+.fv-text .hljs-title.class_,
+.fv-text .hljs-built_in,
+.fv-text .hljs-type {
+    color: #4ec9b0;
+}
+
+.fv-text .hljs-attr,
+.fv-text .hljs-attribute,
+.fv-text .hljs-property,
+.fv-text .hljs-variable,
+.fv-text .hljs-params,
+.fv-text .hljs-selector-class,
+.fv-text .hljs-selector-id {
+    color: #9cdcfe;
+}
+
+.fv-text .hljs-meta,
+.fv-text .hljs-symbol,
+.fv-text .hljs-bullet {
+    color: #d7ba7d;
+}
+
+.fv-text .hljs-section,
+.fv-text .hljs-strong {
+    color: #569cd6;
+    font-weight: 700;
+}
+
+.fv-text .hljs-emphasis {
+    font-style: italic;
+}
+
+.fv-text .hljs-link {
+    color: #3794ff;
+    text-decoration: underline;
+}
+
+.fv-text .hljs-addition {
+    color: #4ec9b0;
+}
+
+.fv-text .hljs-deletion {
+    color: #f48771;
+}

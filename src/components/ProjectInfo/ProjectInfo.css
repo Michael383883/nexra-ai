@@ -1,0 +1,172 @@
+.pi {
+    padding: 14px;
+    color: var(--dp-text);
+    font-size: 13px;
+    background: var(--dp-panel);
+    overflow: auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.pi-empty {
+    color: var(--dp-muted);
+}
+
+.pi-header h3 {
+    margin: 0;
+    font-size: 15px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.pi-version {
+    color: var(--dp-muted);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.pi-type {
+    margin: 2px 0 8px;
+    color: var(--dp-muted);
+}
+
+.pi-badges {
+    display: flex;
+    gap: 6px;
+}
+
+.pi-badge {
+    border: 1px solid var(--dp-border);
+    border-radius: 999px;
+    padding: 1px 8px;
+    font-size: 11px;
+    color: var(--dp-muted);
+}
+
+.pi-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 14px 0;
+}
+
+.pi-stats div {
+    background: var(--dp-bg);
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.pi-stats strong {
+    display: block;
+    font-size: 15px;
+}
+
+.pi-stats span {
+    color: var(--dp-muted);
+    font-size: 11px;
+}
+
+.pi-section {
+    margin-top: 16px;
+}
+
+.pi-section h4 {
+    margin: 0 0 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--dp-muted);
+}
+
+.pi-bar {
+    display: flex;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--dp-bg);
+}
+
+.pi-langs {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 4px;
+}
+
+.pi-langs li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pi-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex: none;
+}
+
+.pi-lang-name {
+    flex: 1;
+}
+
+.pi-lang-pct {
+    color: var(--dp-muted);
+    font-size: 12px;
+}
+
+.pi-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pi-chip {
+    background: var(--dp-bg);
+    border: 1px solid var(--dp-border);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+.pi-files {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--dp-mono);
+    font-size: 12px;
+    display: grid;
+    gap: 3px;
+}
+
+.pi-scripts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 4px;
+}
+
+.pi-scripts li {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    min-width: 0;
+}
+
+.pi-scripts code {
+    font-family: var(--dp-mono);
+    color: var(--dp-accent);
+    flex: none;
+}
+
+.pi-scripts span {
+    color: var(--dp-muted);
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

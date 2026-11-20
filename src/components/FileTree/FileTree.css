@@ -1,0 +1,90 @@
+.ft-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ft-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 24px;
+    padding-right: 8px;
+    color: var(--dp-text);
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.ft-row:hover {
+    background: var(--dp-hover);
+}
+
+.ft-row:focus-visible {
+    outline: 1px solid var(--dp-accent);
+    outline-offset: -1px;
+}
+
+.ft-row.is-active {
+    background: var(--dp-active);
+}
+
+.ft-chevron {
+    width: 10px;
+    flex: none;
+    color: var(--dp-muted);
+    font-size: 11px;
+    text-align: center;
+}
+
+.ft-check {
+    margin: 0;
+    flex: none;
+    accent-color: var(--dp-accent);
+    cursor: pointer;
+}
+
+.ft-icon {
+    flex: none;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.ft-dot {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+.ft-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ft-name.is-sensitive {
+    color: var(--dp-warn);
+}
+
+.ft-modified {
+    flex: none;
+    color: var(--dp-warn);
+    font-size: 10px;
+}
+
+.ft-size {
+    flex: none;
+    color: var(--dp-muted);
+    font-size: 11px;
+}
+
+.ft-loading,
+.ft-empty {
+    color: var(--dp-muted);
+    font-size: 12px;
+    padding: 4px 8px;
+}
